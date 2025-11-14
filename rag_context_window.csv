@@ -1,0 +1,17 @@
+Symptom,Possible Diseases,Severity Level,Recommended Tests,Treatment Advice,Emergency Flag
+Fever,"Viral Infection, Malaria, Typhoid",Moderate,"CBC, Malaria Test","Stay hydrated, take paracetamol, rest",No
+Chest Pain,"Heart Attack, Acid Reflux, Anxiety",Severe,"ECG, Troponin Test",Call emergency if persistent; avoid heavy meals,Yes
+Cough,"Common Cold, Bronchitis, COVID-19",Mild,"Chest X-Ray, COVID Test","Steam inhalation, cough syrup",No
+Shortness of Breath,"Asthma, Pneumonia, Heart Failure",Severe,"Chest X-Ray, Oxygen Saturation",Seek immediate medical care,Yes
+Headache,"Migraine, Dehydration, Sinusitis",Mild,"BP Check, CT Scan if chronic","Drink water, rest in dark room",No
+Abdominal Pain,"Gastritis, Food Poisoning, Appendicitis",Moderate,"Ultrasound, Blood Test","Avoid spicy food, drink fluids",No
+Fatigue,"Anemia, Thyroid Disorder, Diabetes",Moderate,"Thyroid Panel, Blood Sugar","Get 8h sleep, eat iron-rich foods",No
+Skin Rash,"Allergy, Measles, Eczema",Mild,Skin Patch Test,"Apply soothing lotion, avoid allergens",No
+High Blood Pressure,Hypertension,Severe,"BP Monitoring, ECG","Reduce salt, exercise, consult doctor",Yes
+Frequent Urination,"Diabetes, UTI",Moderate,"Blood Sugar, Urine Test","Stay hydrated, check sugar levels",No
+Pelvic Pain,"Endometriosis, Ovarian Cyst, PID",Moderate,"Pelvic Ultrasound, MRI","Pain management, gynecologist consultation",No
+Irregular Periods,"PCOS, Thyroid Disorder, Hormonal Imbalance",Moderate,"Hormone Test, Ultrasound","Maintain healthy weight, consult gynecologist",No
+Excessive Bleeding,"Fibroids, Endometrial Hyperplasia, PCOS",Severe,"Ultrasound, CBC",Seek immediate medical attention if heavy bleeding,Yes
+Lower Back Pain,"Muscle Strain, Kidney Stones, Pregnancy",Moderate,"Urine Test, Ultrasound","Rest, pain relief, hydrate",No
+Hot Flashes,"Menopause, Hormonal Changes",Mild,Hormone Level Test,"Stay cool, avoid caffeine",No
+Pregnancy Nausea,Morning Sickness,Mild,"Pregnancy Test, Ultrasound","Eat small frequent meals, stay hydrated",No
