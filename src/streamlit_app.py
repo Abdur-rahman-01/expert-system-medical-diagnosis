@@ -18,6 +18,7 @@ st.set_page_config(
 
 st.title("Neural Tech— Medical Diagnosis (Prototype)")
 st.markdown("**Disclaimer:** Prototype only. This is not medical advice.")
+st.markdown("If you cant find your condition, try RAG or Hybrid mode")
 
 # Sidebar: choose mode
 mode = st.sidebar.radio("Choose layer", ["Rule-Based", "RAG (Knowledge)", "Hybrid (Rule+RAG+LLM)"])
