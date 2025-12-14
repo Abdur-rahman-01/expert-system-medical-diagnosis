@@ -1,12 +1,8 @@
 import streamlit as st
-from rules_engine import RuleEngine
-from hybrid_engine import HybridEngine, load_rag_index
-from llm_wrapper import generate_with_llm
-import pandas as pd
+import os
 from PIL import Image
 
-import os
-
+# --- 1. Setup Page Config (Must be first Streamlit command) ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 favicon_path = os.path.join(BASE_DIR, "favicon.png")
 favicon = "🩺"  # default fallback
@@ -14,15 +10,24 @@ favicon = "🩺"  # default fallback
 if os.path.exists(favicon_path):
     try:
         favicon = Image.open(favicon_path)
-    except Exception:
-        pass  # silent fallback
+    except Exception as e:
+        print(f"Warning: Could not load favicon: {e}")
 
-# MUST be first Streamlit command
 st.set_page_config(
     page_title="Neural Tech: Medical Diagnosis",
     layout="centered",
     page_icon=favicon
 )
+
+# --- 2. Import Custom Modules (Lazy load to catch errors) ---
+try:
+    from rules_engine import RuleEngine
+    from hybrid_engine import HybridEngine, load_rag_index
+    from llm_wrapper import generate_with_llm
+    import pandas as pd
+except Exception as e:
+    st.error(f"Critical Error: Failed to import application modules.\n\nDetails: {e}")
+    st.stop()
 
 st.title("Neural Tech— Medical Diagnosis (Prototype)")
 st.markdown("**Disclaimer:** Prototype only. This is not medical advice.")
