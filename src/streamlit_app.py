@@ -8,12 +8,16 @@ from PIL import Image
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-try:
-    favicon = Image.open(os.path.join(BASE_DIR, "favicon.png"))
-except Exception as e:
-    st.error(f"Error loading favicon: {e}")
-    favicon = "🩺"  # fallback to emoji
+favicon_path = os.path.join(BASE_DIR, "favicon.png")
+favicon = "🩺"  # default fallback
 
+if os.path.exists(favicon_path):
+    try:
+        favicon = Image.open(favicon_path)
+    except Exception:
+        pass  # silent fallback
+
+# MUST be first Streamlit command
 st.set_page_config(
     page_title="Neural Tech: Medical Diagnosis",
     layout="centered",
