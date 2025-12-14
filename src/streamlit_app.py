@@ -1,14 +1,17 @@
 import streamlit as st
-from rules_engine import RuleEngine
-from hybrid_engine import HybridEngine, load_rag_index
-from llm_wrapper import generate_with_llm
-import pandas as pd
+import os
 from PIL import Image
 
-import os
-
+# --- 1. Setup Page Config (Must be first Streamlit command) ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-favicon = Image.open(os.path.join(BASE_DIR, "favicon.png"))
+favicon_path = os.path.join(BASE_DIR, "favicon.png")
+favicon = "🩺"  # default fallback
+
+if os.path.exists(favicon_path):
+    try:
+        favicon = Image.open(favicon_path)
+    except Exception as e:
+        print(f"Warning: Could not load favicon: {e}")
 
 st.set_page_config(
     page_title="Neural Tech: Medical Diagnosis",
@@ -16,8 +19,19 @@ st.set_page_config(
     page_icon=favicon
 )
 
+# --- 2. Import Custom Modules (Lazy load to catch errors) ---
+try:
+    from rules_engine import RuleEngine
+    from hybrid_engine import HybridEngine, load_rag_index
+    from llm_wrapper import generate_with_llm
+    import pandas as pd
+except Exception as e:
+    st.error(f"Critical Error: Failed to import application modules.\n\nDetails: {e}")
+    st.stop()
+
 st.title("Neural Tech— Medical Diagnosis (Prototype)")
 st.markdown("**Disclaimer:** Prototype only. This is not medical advice.")
+st.markdown("If you cant find your condition, try RAG or Hybrid mode")
 
 # Sidebar: choose mode
 mode = st.sidebar.radio("Choose layer", ["Rule-Based", "RAG (Knowledge)", "Hybrid (Rule+RAG+LLM)"])

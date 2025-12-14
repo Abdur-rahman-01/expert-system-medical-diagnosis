@@ -78,7 +78,106 @@ def medical_diagnosis():
             "severity": "Severe",
             "emergency": True,
             "explanation": "Breathing difficulty with cough suggests airway narrowing."
+        },
+        {
+            "name": "Hypoglycemia",
+            "conditions": ["sweating", "headache", "fatigue"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Low blood sugar episode."
+        },
+        {
+            "name": "Dengue Fever",
+            "conditions": ["fever", "chills", "body_pain"],
+            "severity": "Mild",
+            "emergency": False,
+            "explanation": "Viral infection with fever, chills, and body pain."
+        },
+        {
+            "name": "Pneumonia",
+            "conditions": ["fever", "cough", "shortness_breath", "chest_pain"],
+            "severity": "Severe",
+            "emergency": True,
+            "explanation": "Lung infection requiring medical attention."
+        },
+        {
+            "name": "COVID-19",
+            "conditions": ["fever", "cough", "sore_throat", "fatigue", "headache"],
+            "severity": "Severe",
+            "emergency": False,
+            "explanation": "Viral respiratory illness."
+        },
+        {
+            "name": "Gastroenteritis",
+            "conditions": ["nausea", "vomiting", "abdominal_pain", "fever"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Stomach flu or food-related illness."
+        },
+        {
+            "name": "Migraine",
+            "conditions": ["headache", "nausea", "vomiting", "fatigue"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Severe headache with neurological symptoms."
+        },
+        {
+            "name": "Bronchitis",
+            "conditions": ["cough", "sore_throat", "chest_pain", "fatigue"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Inflammation of the bronchial tubes."
+        },
+        {
+            "name": "Typhoid",
+            "conditions": ["fever", "headache", "abdominal_pain", "fatigue"],
+            "severity": "Severe",
+            "emergency": False,
+            "explanation": "Bacterial infection affecting the intestines."
+        },
+        {
+            "name": "Tuberculosis",
+            "conditions": ["cough", "fever", "sweating", "shortness_breath"],
+            "severity": "Severe",
+            "emergency": False,
+            "explanation": "Bacterial lung infection."
+        },
+        {
+            "name": "Chickenpox",
+            "conditions": ["fever", "body_pain", "headache", "fatigue"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Viral infection with characteristic rash."
+        },
+        {
+            "name": "Urinary Tract Infection",
+            "conditions": ["abdominal_pain", "nausea", "fever", "fatigue"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Bacterial infection of the urinary system."
+        },
+        {
+            "name": "Appendicitis",
+            "conditions": ["abdominal_pain", "nausea", "vomiting", "fever"],
+            "severity": "Severe",
+            "emergency": True,
+            "explanation": "Inflammation of the appendix requiring surgery."
+        },
+        {
+            "name": "Anxiety Attack",
+            "conditions": ["shortness_breath", "chest_pain", "sweating", "headache"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Panic or anxiety episode."
+        },
+        {
+            "name": "Diabetes Complication",
+            "conditions": ["fatigue", "nausea", "sweating", "headache"],
+            "severity": "Moderate",
+            "emergency": False,
+            "explanation": "Possible hypo/hyperglycemia or related issue."
         }
+
     ]
 
     # -----------------------------------------
