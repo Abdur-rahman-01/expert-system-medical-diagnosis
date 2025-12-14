@@ -8,7 +8,11 @@ from PIL import Image
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-favicon = Image.open(os.path.join(BASE_DIR, "favicon.png"))
+try:
+    favicon = Image.open(os.path.join(BASE_DIR, "favicon.png"))
+except Exception as e:
+    st.error(f"Error loading favicon: {e}")
+    favicon = "🩺"  # fallback to emoji
 
 st.set_page_config(
     page_title="Neural Tech: Medical Diagnosis",
